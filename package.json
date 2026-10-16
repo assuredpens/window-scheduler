@@ -1,0 +1,1 @@
+{"name":"window-scheduler","private":true,"type":"module","scripts":{"start":"node app.mjs","test":"node test.mjs"}}
