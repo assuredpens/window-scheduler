@@ -1,6 +1,7 @@
 import { fileURLToPath } from 'node:url';
 import { start } from './lib/server.mjs';
 import { run, validate } from './core.mjs';
+import { product } from './project.mjs';
 export * from './core.mjs';
 export const spec = { ...{
   "slug": "window",
@@ -50,7 +51,7 @@ export const spec = { ...{
   },
   "changed": "Inputs now require dated instants with explicit offsets. IANA zones render local dates, and candidate ranking minimizes the worst participant loss first.",
   "limits": "No calendar login, invitations or automatic resolution of local DST ambiguities. Input instants need Z or an explicit offset.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "inputSchema": {
     "type": "object",
     "required": [
@@ -73,6 +74,6 @@ export const spec = { ...{
       }
     }
   }
-}, run, validate };
+}, run, validate, product };
 if (process.argv[1] === fileURLToPath(import.meta.url)) start(spec);
 
